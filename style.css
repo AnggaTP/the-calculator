@@ -1,0 +1,124 @@
+:root{
+    --black : #04151F;
+    --mahogany : #C44900;
+    --wheat : #EFD6AC;
+    --darkgray : #183A37;
+    --darkpurple : #432534;
+}
+@font-face {
+    font-family: Digital;
+    src: url(digital-7.ttf);
+}
+body{
+    background-color: var(--wheat);
+}
+
+/* Container for calculator */
+.container{
+    background-color: var(--darkpurple);
+    display: grid;
+    width: 40vw;
+    height: 70vh;
+    margin: 10vh auto;
+    padding: 20px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(6,1fr);
+    grid-template-areas: 
+    "display display display display"
+    "operator operator operator operator"
+    "equal num num num"
+    "equal num num num"
+    "equal num num num"
+    "equal num num num"
+    ;
+}
+
+/* style numpad button */
+.num{
+    background-color: var(--wheat);
+    border: 1px solid var(--darkpurple);
+    color: var(--black);
+    cursor: pointer;
+    box-shadow: 0 2px var(--darkgray);
+}
+
+.num:hover{
+    background-color:#cdb893;
+    
+}
+.num:active{
+    background-color:#cdb893;
+    transform: translateY(2px);
+}
+.numpad{
+    grid-area: num;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap: 5px;
+}
+
+/* style operator button */
+.opbtn{
+    background-color: var(--mahogany);
+    border: none;
+    color: var(--wheat);
+}
+
+.opbtn:hover{
+    background-color: #b24100;
+}
+
+.opbtn:active{
+    background-color:#b24100;
+    transform: translateY(2px);
+}
+
+.operators{
+    grid-area: operator ;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* style equal button */
+.equalBtn{
+    grid-area: equal;
+    margin-right: 5px;
+    background-color: var(--mahogany);
+    color: var(--wheat);
+    border: none;
+}
+
+.equalBtn:hover{
+    background-color: #b24100;
+}
+
+.equalBtn:active{
+    background-color:#b24100;
+    transform: translateY(2px);
+}
+
+/* style the output field */
+.displayArea{
+    grid-area: display;
+    display: grid;
+    border: 5px solid var(--wheat);
+    align-items:stretch;
+}
+
+input{
+    text-align: end;
+    font-size: 48px;
+    font-family: "Digital";
+    pointer-events: none;
+    background-color: var(--wheat);
+}
+
+/* style the entire button */
+button{
+    font-weight: 700;
+    font-size: 18px;
+}
