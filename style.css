@@ -9,16 +9,54 @@
     font-family: Digital;
     src: url(digital-7.ttf);
 }
+
+@font-face {
+    font-family: Stiches;
+    src: url(CFNationalStitches-Regular.ttf);
+}
 body{
     background-color: var(--wheat);
 }
+
+.page{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.title-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-size: 60px;
+    font-family: "Stiches";
+    color: var(--mahogany);
+}
+
+.sub-title{
+    font-size: 30px;
+    font-family: "Stiches";
+    text-align: center;
+    color: var(--black);
+}
+
+.creator{
+    font-size: 20px;
+    font-family: "Stiches";
+    text-align: center;
+    color: var(--black);
+}
+
 
 /* Container for calculator */
 .container{
     background-color: var(--darkpurple);
     display: grid;
-    width: 40vw;
-    height: 70vh;
+    width: 400px;
+    height: 500px;
     margin: 10vh auto;
     padding: 20px;
     grid-template-columns: repeat(4,1fr);
@@ -74,10 +112,12 @@ body{
     transform: translateY(2px);
 }
 
+
+
 .operators{
     grid-area: operator ;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: 95px repeat(4,1fr);
     gap: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -87,6 +127,7 @@ body{
 .equalBtn{
     grid-area: equal;
     margin-right: 5px;
+    padding: 0;
     background-color: var(--mahogany);
     color: var(--wheat);
     border: none;
@@ -107,15 +148,24 @@ body{
     display: grid;
     border: 5px solid var(--wheat);
     align-items:stretch;
+    background-color: var(--wheat);
+    justify-content: end;
+}
+.currentOutput,
+.previousOutput{
+    font-family: Digital;
+    justify-self: end;
 }
 
-input{
-    text-align: end;
-    font-size: 48px;
-    font-family: "Digital";
-    pointer-events: none;
-    background-color: var(--wheat);
+.currentOutput{
+    display: grid;
+    font-size: 42px;
+    max-width: 390px;
 }
+.previousOutput{
+    font-size: 22px;
+}
+
 
 /* style the entire button */
 button{
