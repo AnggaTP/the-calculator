@@ -8,32 +8,43 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <div class="numpad">
-            <button class="num1 num">1</button>
-            <button class="num2 num">2</button>
-            <button class="num3 num">3</button>
-            <button class="num4 num">4</button>
-            <button class="num5 num">5</button>
-            <button class="num6 num">6</button>
-            <button class="num7 num">7</button>
-            <button class="num8 num">8</button>
-            <button class="num9 num">9</button>
-            <button class="num10 num">0</button>
-            
+    <section class="page">
+        <div class="title-container">
+            <div class="title">The Calculator</div>
+            <div class="sub-title">Mini Project</div>
+            <div class="creator">by Angga Priantoko</div>
         </div>
-
-        <div class="operators">
-            <button class="add opbtn">+</button>
-            <button class="sub opbtn">-</button>
-            <button class="multiply opbtn">x</button>
-            <button class="divide opbtn">:</button>
+        <div class="container">
+            <div class="numpad">
+                <button data-number class="num">1</button>
+                <button data-number class="num">2</button>
+                <button data-number class="num">3</button>
+                <button data-number class="num">4</button>
+                <button data-number class="num">5</button>
+                <button data-number class="num">6</button>
+                <button data-number class="num">7</button>
+                <button data-number class="num">8</button>
+                <button data-number class="num">9</button>
+                <button data-delete class="num">C</button>
+                <button data-number class="num">0</button>
+                <button data-number class="num">.</button>
+            </div>
+    
+            <div class="operators">
+                <button data-all-clear class="opbtn">AC</button>
+                <button data-operand class="opbtn">+</button>
+                <button data-operand class="opbtn">-</button>
+                <button data-operand class="opbtn">×</button>
+                <button data-operand class="opbtn">÷</button>
+            </div>
+    
+            <button data-equal class="equalBtn">=</button>
+            <div class="displayArea">
+                <div data-previous class="previousOutput"></div>
+                <div data-current class="currentOutput"></div>
+            </div>
         </div>
-
-        <button class="equalBtn">=</button>
-        <div class="displayArea">
-            <input type="text" name="" id="total">
-        </div>
-    </div>
+    </section>
+    
 </body>
 </html>
